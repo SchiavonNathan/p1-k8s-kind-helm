@@ -23,24 +23,24 @@ O projeto consiste em:
 2.  **Construa a imagem Docker:**
     ```bash
     cd app/
-    docker build -t meu-app-helm:v1.0.0 .
+    docker build -t my-app-helm:v1.0.0 .
     ```
 
 3.  **Crie um cluster `kind` e carregue a imagem:**
     ```bash
     kind create cluster
-    kind load docker-image meu-app-helm:v1.0.0
+    kind load docker-image my-app-helm:v1.0.0
     ```
 
 4.  **Instale o Helm Chart:**
     (A partir da raiz do projeto)
     ```bash
-    helm install meu-release ./meu-chart
+    helm install my-release ./my-chart
     ```
 
 5.  **Acesse a aplicação:**
     ```bash
-    kubectl port-forward svc/meu-release-meu-chart 8080:5000
+    kubectl port-forward svc/my-release-my-chart 8080:5000
     ```
     Abra `http://localhost:8080` no seu navegador.
 
